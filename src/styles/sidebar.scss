@@ -30,3 +30,14 @@ nav.sidebar {
     width: 100%;
   }
 }
+
+@media (max-width: 800px) {
+  nav.sidebar {
+    max-width: 8rem;
+    padding: 1rem;
+    > span {
+      display: none;
+     }
+  }
+  
+}

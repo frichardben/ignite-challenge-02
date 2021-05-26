@@ -31,3 +31,27 @@ main {
     list-style: none;
   }
 }
+
+@media (max-width: 800px) {
+  .container {
+    padding-left: 2rem;
+  }
+  main .movies-list {
+   
+   grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 500px) {
+  main .movies-list {
+    grid-template-columns: 1fr;
+   }
+   header span.category {
+     font-size: 1.9rem;
+   }
+
+   main {
+     margin-top: 3.5rem;
+   }
+}

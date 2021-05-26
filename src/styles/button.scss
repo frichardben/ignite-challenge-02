@@ -33,3 +33,19 @@ button {
     color: var(--yellow);
   }
 }
+
+@media (max-width: 800px) {
+  button {
+    background-color: transparent;
+    max-width: 6rem;
+    display: flex;
+    flex-direction: column;
+    &.selected {
+      background-color: transparent;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+}
