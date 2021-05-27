@@ -1,34 +1,6 @@
-import { createContext, ReactNode, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { api } from '../services/api';
-
-interface GenreResponseProps {
-    id: number;
-    name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-    title: string;
-  }
-  
-interface MovieProps {
-    imdbID: string;
-    Title: string;
-    Poster: string;
-    Ratings: Array<{
-        Source: string;
-        Value: string;
-    }>;
-    Runtime: string;
-}
-
-interface MoviesProviderPros {
-    children: ReactNode
-}
-  
-interface MoviesContextData {
-    genres: GenreResponseProps[];
-    movies: MovieProps[];
-    selectedGenre: GenreResponseProps;
-    selectedGenreId: number
-    handleClickButton: (id: number) => void;
-}
+import { GenreResponseProps, MovieProps, MoviesContextData, MoviesProviderPros } from '../types';
 
 
 export const MoviesContext = createContext<MoviesContextData>(
